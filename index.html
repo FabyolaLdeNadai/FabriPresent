@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Caza del Completo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="intro">
+    <h1>🎉 Bienvenido a la Caza del Completo 🎉</h1>
+    <p>
+      🌭 ¡Este es un jueguito hecho especialmente para ti!<br><br>
+      Vas a encontrar <strong>4 completos escondidos</strong> na tela:<br>
+      - <strong>3 de ellos</strong> Te mostrarán partes de un video especial lleno de recuerdos<br>
+      - <strong>El 4º</strong> Se liberará el video completo<br><br>
+      Después de eso... <strong>5 cartas sorpresa</strong> de tus amigos que formaron parte de tus momentos especiales contigo (con participación especial de Grachi que me ayudó con casi todo 🤣).
+    </p>
+    <button id="startButton">Inicio</button>
+  </div>
+
+  <div id="gameArea">
+    <h1>🌭 Caza del Completo 🌭</h1>
+    <p>Haz clic en los completos para desbloquear memorias secretas</p>
+
+    <div class="hotdog" id="heart0" onclick="reveal(0, this)">🌭</div>
+    <div class="hotdog" id="heart1" onclick="reveal(1, this)">🌭</div>
+    <div class="hotdog" id="heart2" onclick="reveal(2, this)">🌭</div>
+    <div class="hotdog" id="heart3" onclick="reveal(3, this)">🌭</div>
+
+    <div id="mensagem"></div>
+  </div>
+
+  <div id="cardsArea" class="container" style="opacity: 0; visibility: hidden;">
+    <div class="envelope-wrapper envelope-wrapper-1">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong>Fabri,</strong>
+            <p>Feliz cumpleaños amigo mío, que Dios te bendiga, te acompañe en tu día y en todo lo que venga un abrazo lokillo</p>
+            <strong>- Benja</strong>
+          </div>
+        </div>
+      </div>
+      <div class="heart heart-1"></div>
+    </div>
+  
+    <div class="envelope-wrapper envelope-wrapper-2">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong></strong>
+            <p>Bibimbap</p>
+            <strong>- Bibi</strong>
+          </div>
+        </div>
+      </div>
+      <div class="heart heart-2"></div>
+    </div>
+  
+    <div class="envelope-wrapper envelope-wrapper-3">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong>Buena malaya caeza de poste,</strong>
+            <p>Esperando que te encuentres muy bien el día de hoy, voy a decirte unas palabras para que te sientas mejor de tu pinche vida culera. Ayia la weona pesa que le decía eso en su cumple, ajajajaj.
+
+              Ya, ahora poniéndome seria: puta que te extraño, mi Fabritzzio Panini. Yo creo que en otra vida fuimos hermanos o no sé que weá, pero puta que es bakán cuando uno encuentra a alguien con el mismo humor de uno y con buenos valores, que te comprenda y que ha tenido una experiencia de vida intensa igual que uno.
+              
+              Eres una persona muy importante para mí, porque en momentos malos fuiste una compañía fundamental. Te juro que cuando aparecías era como un alivio a esos días de mierda que hubo en Mammoth.
+              Llegar a la casa y tener a una persona hablando en español de España era un meme, aunque me dijeras puras cosas malas como: “me importa una mierda cómo haya estado tu día, coño, que vengo de currar todo el día como el puto negro que soy.”
+              Te juro que escuchar esa estupidez era increíble, o los días que me decíai que me callara con tu tono de enfermito mental, sin importar el contexto que hubiera detrás de lo que te quería contar. 
+              Esas cosas, te juro, fueron de las que más me acuerdo de Mammoth. Espero que sigas hablando así, porque si no, qué fome, ajajajaj.
+              
+              Bueno, y decirte que aunque me faltó conocerte más en profundidad, porque el muy lindo le gusta hacerse el misterioso, siento que eres una persona súper sensible y con un corazón súper sano. No sé cómo explicar eso, pero hay veces que la gente tiene un corazón podrido, y que por más que intenten hacer cosas buenas, se siente que el trasfondo de lo que hacen es falso o forzado. Y yo, que soy una sensible de mierda, pude sentir que tu cariño con los que te rodean es genuino.
+              Se nota también que eres un muy buen hijo y hermano. Eso lo pude notar en cómo tu familia te hablaba cuando estabas en llamada con ellos, y por más que hayan algunos momentos difíciles en la familia, doy fe del amor que hay en la tuya.
+              Sé que vas a seguir siendo un misterioso con tus problemas, pero de verdad quiero que sepas que, con todo el cariño de mi corazón, voy a estar para ti. 
+              Si algún día necesitas hablar para desahogarte, cuenta conmigo. Y si algún día necesitas un consejo, también cuenta conmigo, aunque no sean tan buenos consejos, ajajajaja.
+              
+              Te quiero mucho, coñiooo. Ojalá sea un día muy lindo para ti, porque te lo mereces, mi xan.
+              Dale con todo pa’ delante y sigue siendo tú, que nadie te quite esa sonrisa que tienes, que tanto alegra a todos. Un abrazo.
+              
+              </p>
+            <strong>    Atte: la grashile           (pa’ los vios)</strong>
+            <br><br>
+            <strong></strong>
+          </div>
+        </div>
+      </div>
+      <div class="heart heart-3"></div>
+    </div>
+  
+    <div class="envelope-wrapper envelope-wrapper-4 bottom-row">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong></strong>
+            <p>Blu blu blu</p>
+            <strong>- Gabriel</strong>
+          </div>
+        </div>
+      </div>
+      <div class="heart heart-4"></div>
+    </div>
+  
+    <div class="envelope-wrapper envelope-wrapper-5 bottom-row">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong>Mensagem Extra</strong>
+            <p>Bla bla bla ✨</p>
+            <strong>- Fer</strong>
+          </div>
+        </div>
+      </div>
+      <div class="heart heart-5"></div>
+    </div>
+  </div>
+  
+  <div id="videoModal">
+    <span class="close" onclick="closeModal()">×</span>
+    <video id="modalVideo" controls autoplay></video>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.envelope-wrapper').forEach(wrapper => {
+            wrapper.addEventListener('click', () => {
+                wrapper.classList.toggle('flap');
+            });
+        });
+    function toggleCard(el) {
+      el.classList.toggle('flap');
+    }
+  </script>
+</body>
+</html>
